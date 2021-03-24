@@ -39,9 +39,11 @@ export const Iframed3dContent = () => {
 const IframeWrapper = styled.div`
     width: 100%;
     height: 1300px;
-    position: absolute; 
+    position: fixed; 
     overflow: hidden; 
     outline: none;
+    top: 0;
+    z-index: 1;
 `
 
 const StyledIframe = styled.iframe`
