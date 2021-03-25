@@ -5,13 +5,14 @@ export const ReactContent = () => {
   return (
     <Container>
       <TransparentSection>
-        <Heading>Transparent content moderation - powered by Chainlink</Heading>
+        <Heading>TrueSight</Heading>
+        <Subheading>Transparent content moderation powered by Chainlink</Subheading>
       </TransparentSection>
       <WhiteSection>
-        <Subheading>
+        <ContentSectionHeading>
           Content moderation should be focused on protecting the safety of young
           or otherwise vulnerable users
-        </Subheading>
+        </ContentSectionHeading>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -21,9 +22,9 @@ export const ReactContent = () => {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
-        <Subheading>
+        <ContentSectionHeading>
           Today users have two choices when it comes to social networks...
-        </Subheading>
+        </ContentSectionHeading>
         <ComparisonGrid>
           <ComparisonGridCol>
             <ComparisonGridColHeading>
@@ -52,7 +53,7 @@ export const ReactContent = () => {
             </ComparisonGridColHeading>
             <ul>
               <GoodLi>
-                <b>Users own their own data</b>
+                <b>Users control their own data</b>
               </GoodLi>
               <MedLi>
                 <b>No platform-level content moderation - </b>Onus of content
@@ -76,6 +77,15 @@ export const ReactContent = () => {
             Source
           </QuoteSource>
         </Quote>
+        <ContentSectionHeading>The Chainlink network can provide a better way</ContentSectionHeading>
+        <p>
+          An independent network of Chainlink oracles providing image
+          classification services can be leveraged by social networks to provide{" "}
+          <b>transparent</b> and <b>impartial</b> content moderation for their
+          users.
+
+          Our hackathon project, TrueSight, is a demonstration of how this can be achieved.
+        </p>
         <VideoPlaceholder>Video placeholder</VideoPlaceholder>
       </WhiteSection>
     </Container>
@@ -100,12 +110,20 @@ const Container = styled.div`
 const TransparentSection = styled.div`
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 240px;
   background-color: transparent;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+
+  @media (max-width: 768px) {
+    height: 160px;
+  }
 `;
 
 const WhiteSection = styled.div`
@@ -129,8 +147,8 @@ const WhiteSection = styled.div`
 const Heading = styled.h1`
   text-align: center;
   font-size: 2.6rem;
-  font-weight: 400;
-  font-family: "Fredoka One", cursive;
+  font-weight: 600;
+  margin: 0;
 
   @media (max-width: 768px) {
     font-size: 1.4rem;
@@ -138,9 +156,20 @@ const Heading = styled.h1`
 `;
 
 const Subheading = styled.h2`
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin: 0;
+  font-style: italic;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+`;
+
+const ContentSectionHeading = styled.h3`
   font-size: 2rem;
   font-weight: 400;
-  font-family: "Fredoka One", cursive;
   color: #6c02c9;
 
   @media (max-width: 768px) {
@@ -198,15 +227,19 @@ const QuoteSource = styled(QuoteLink)`
   color: #003f9e;
 `;
 
-const BadLi = styled.li`
+const ComparisonsLi = styled.li`
+  margin: 10px 0;
+`;
+
+const BadLi = styled(ComparisonsLi)`
   color: red;
 `;
 
-const MedLi = styled.li`
-  color: orange;
+const MedLi = styled(ComparisonsLi)`
+  color: #d18102;
 `;
 
-const GoodLi = styled.li`
+const GoodLi = styled(ComparisonsLi)`
   color: green;
 `;
 
