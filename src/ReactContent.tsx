@@ -243,8 +243,6 @@ const GoodLi = styled(ComparisonsLi)`
   color: green;
 `;
 
-const Typography = styled.span``;
-
 const VideoPlaceholder = styled.div`
   width: 100%;
   max-width: 800px;
