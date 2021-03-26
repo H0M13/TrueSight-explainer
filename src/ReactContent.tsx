@@ -7,7 +7,7 @@ export const ReactContent = () => {
       <TransparentSection>
         <Heading>TrueSight</Heading>
         <Subheading>
-          Transparent content moderation powered by Chainlink
+          Transparent content moderation powered by Chainlink and IPFS
         </Subheading>
       </TransparentSection>
       <WhiteSection>
@@ -60,10 +60,14 @@ export const ReactContent = () => {
         </ContentSectionHeading>
         <p>
           It is clear that decentralised social media platforms have huge
-          benefits over centralised ones. However, if we want to see mainstream
-          adoption of a decentralised social media platform it is highly likely
-          that some form of automated content moderation will be required to
-          protect its users. 
+          benefits over centralised ones. Users no longer have to trust a
+          centralised intermediary who may not have their best interests at
+          heart.
+        </p>
+        <p>
+          However, if we want to see mainstream adoption of a decentralised
+          social media platform it is highly likely that some form of automated
+          content moderation will be required to protect its users.
         </p>
         <Quote>
           I think the issue of moderation is extremely difficult, and you’re
@@ -94,9 +98,9 @@ export const ReactContent = () => {
           their users.
         </p>
         <p>
-          Our hackathon project, TrueSight, includes a simplified demonstration of how
-          this can be achieved through combining Chainlink and IPFS with image
-          classification algorithms. Both the user-uploaded images and the
+          Our hackathon project, TrueSight, includes a simplified demonstration
+          of how this can be achieved through combining Chainlink and IPFS with
+          image classification algorithms. Both the user-uploaded images and the
           calculated moderation labels are stored on IPFS and our demo Chainlink
           node is utilising Amazon Rekognition (a cloud-based image
           classification service) via an external adapter.
