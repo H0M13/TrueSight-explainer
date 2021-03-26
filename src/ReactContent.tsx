@@ -6,22 +6,11 @@ export const ReactContent = () => {
     <Container>
       <TransparentSection>
         <Heading>TrueSight</Heading>
-        <Subheading>Transparent content moderation powered by Chainlink</Subheading>
+        <Subheading>
+          Transparent content moderation powered by Chainlink
+        </Subheading>
       </TransparentSection>
       <WhiteSection>
-        <ContentSectionHeading>
-          Content moderation should be focused on protecting the safety of young
-          or otherwise vulnerable users
-        </ContentSectionHeading>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
         <ContentSectionHeading>
           Today users have two choices when it comes to social networks...
         </ContentSectionHeading>
@@ -65,6 +54,17 @@ export const ReactContent = () => {
             </ul>
           </ComparisonGridCol>
         </ComparisonGrid>
+        <ContentSectionHeading>
+          Content moderation should be focused on protecting the safety of young
+          or otherwise vulnerable users
+        </ContentSectionHeading>
+        <p>
+          It is clear that decentralised social media platforms have huge
+          benefits over centralised ones. However, if we want to see mainstream
+          adoption of a decentralised social media platform it is highly likely
+          that some form of automated content moderation will be required to
+          protect its users. 
+        </p>
         <Quote>
           I think the issue of moderation is extremely difficult, and you’re
           seeing a lot of centralized companies today struggle with that.
@@ -77,15 +77,35 @@ export const ReactContent = () => {
             Source
           </QuoteSource>
         </Quote>
-        <ContentSectionHeading>The Chainlink network can provide a better way</ContentSectionHeading>
+        <ContentSectionHeading>
+          Chainlink and IPFS enable us to do something not before possible
+        </ContentSectionHeading>
+        <p>
+          IPFS uses content addressing to identify content by what it contains
+          rather than the location. Using IPFS as a decentralised content
+          storage solution fits blockchain applications perfectly. Only the IPFS
+          content hash need be stored on-chain and due to the immutable nature
+          of content addressing we can be sure of the data we are referencing.
+        </p>
         <p>
           An independent network of Chainlink oracles providing image
           classification services can be leveraged by social networks to provide{" "}
-          <b>transparent</b> and <b>impartial</b> content moderation for their
-          users.
-
-          Our hackathon project, TrueSight, is a demonstration of how this can be achieved.
+          <b>transparent</b> and <b>trust-minimised</b> content moderation for
+          their users.
         </p>
+        <p>
+          Our hackathon project, TrueSight, includes a simplified demonstration of how
+          this can be achieved through combining Chainlink and IPFS with image
+          classification algorithms. Both the user-uploaded images and the
+          calculated moderation labels are stored on IPFS and our demo Chainlink
+          node is utilising Amazon Rekognition (a cloud-based image
+          classification service) via an external adapter.
+        </p>
+        <CtaButtonContainer>
+          <a href="https://truesite.link">
+            <CtaButton>See the demo!</CtaButton>
+          </a>
+        </CtaButtonContainer>
         <VideoPlaceholder>Video placeholder</VideoPlaceholder>
       </WhiteSection>
     </Container>
@@ -249,4 +269,28 @@ const VideoPlaceholder = styled.div`
   height: 450px;
   background-color: red;
   margin: 20px 0;
+`;
+
+const CtaButtonContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const CtaButton = styled.button`
+  font-size: 2rem;
+  color: white;
+  background-color: #6c02c9;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 20px;
+  pointer-events: auto;
+  cursor: pointer;
+  font-family: "Montserrat";
+
+  &:hover {
+    opacity: 0.8;
+  }
 `;
