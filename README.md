@@ -1,5 +1,5 @@
 # TrueSight
-<img src="https://user-images.githubusercontent.com/6655367/112725086-497a5480-8f0e-11eb-9630-061419b8ccb2.png" alt="illustration" style="width:100px;"/>
+<img src="https://user-images.githubusercontent.com/6655367/112725086-497a5480-8f0e-11eb-9630-061419b8ccb2.png" alt="illustration" style="width:80px;"/>
 
 ## Transparent content moderation powered by Chainlink
 
