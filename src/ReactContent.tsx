@@ -111,6 +111,20 @@ export const ReactContent = () => {
           </a>
         </CtaButtonContainer>
         <VideoPlaceholder>Video placeholder</VideoPlaceholder>
+        <ContentSectionHeading>Taking it further...</ContentSectionHeading>
+        <p>
+          To better decentralise the TrueSight network a result aggregation
+          mechanism could be implemented to allow several independent Chainlink
+          nodes to perform their own image classification algorithms before
+          coming to consensus about the most correct answer.
+        </p>
+        <p>
+          Most image classification services will return results in completely
+          different formats to one another. Aggregation on results of varying
+          formats could be very difficult. It may therefore be beneficial to
+          have an agreed upon results format which all nodes in the network must
+          map results to before aggregation begins.
+        </p>
       </WhiteSection>
     </Container>
   );
