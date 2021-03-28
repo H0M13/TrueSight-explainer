@@ -165,6 +165,7 @@ const TransparentSection = styled.div`
 `;
 
 const WhiteSection = styled.div`
+  pointer-events: auto;
   padding: 50px 100px;
   position: relative;
   max-width: 800px;
