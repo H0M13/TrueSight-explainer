@@ -145,9 +145,19 @@ export const ReactContent = () => {
           map results to before aggregation begins.
         </p>
       </WhiteSection>
+      <MobileIndicator />
     </Container>
   );
 };
+
+const MobileIndicator = styled.div`
+  background-color: ${props => props.isMobileDevice ? "red" : "blue"};
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  top: 0;
+  right: 0;
+`
 
 const Container = styled.div`
   margin-top: 500px;
