@@ -5,8 +5,7 @@ export const ReactContent = () => {
   const [isMobileDevice, setIsMobileDevice] = useState(false);
 
   useEffect(() => {
-    if (typeof window.orientation !== 'undefined')
-    setIsMobileDevice(true);
+    if (typeof window.orientation !== "undefined") setIsMobileDevice(true);
   }, []);
 
   return (
@@ -41,6 +40,9 @@ export const ReactContent = () => {
                 generated content may be removed with no explanation. Platform
                 bias may influence moderation.
               </MedLi>
+              <GoodLi>
+                <b>Мainstream adoption</b>
+              </GoodLi>
             </ul>
           </ComparisonGridCol>
           <ComparisonGridCol>
@@ -58,6 +60,9 @@ export const ReactContent = () => {
                 being exposed to malicious content before other users have
                 chance to flag it.
               </MedLi>
+              <BadLi>
+                <b>Lack of mainstream adoption</b>
+              </BadLi>
             </ul>
           </ComparisonGridCol>
         </ComparisonGrid>
@@ -118,6 +123,27 @@ export const ReactContent = () => {
           </a>
         </CtaButtonContainer>
         <VideoPlaceholder>Video placeholder</VideoPlaceholder>
+        <ContentSectionHeading>Beyond social media</ContentSectionHeading>
+        <p>
+          There are many cases for content moderation outside of social media
+          platforms too. One blockchain-based gaming example we have witnessed
+          ourselves has been during the recent launch of Aavegotchis which are
+          ghost themed tamagotchi style NFTs which are planned to be used in
+          virtual meet-ups and mini-games. Players are able to name their
+          Aavegotchis anything they wish and the names are shown publicly. Some
+          Aavegotchis were given offensive names and some members of the
+          Aavegotchi DAO saw this as problematic and raised concern that lack of
+          censorship here could have have a negative impact on the growth of the
+          game.
+        </p>
+        <p>
+          While this has been managed so far by censoring offensive names in the
+          UI layer it may have been beneficial to disallow players from setting
+          offensive names for their Aavegotchis on the smart contract layer.
+          This would both standardise content moderation across front-end
+          clients displaying Aavegotchis and also take the onus of content
+          moderation off them.
+        </p>
         <ContentSectionHeading>Taking it further...</ContentSectionHeading>
         <p>
           To better decentralise the TrueSight network a result aggregation
