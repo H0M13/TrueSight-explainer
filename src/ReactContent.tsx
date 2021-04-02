@@ -13,12 +13,85 @@ export const ReactContent = () => {
       <TransparentSection>
         <Heading>TrueSight</Heading>
         <Subheading>
-          Transparent content moderation powered by Chainlink and IPFS
+          Decentralised content moderation powered by Chainlink and IPFS
         </Subheading>
       </TransparentSection>
       <WhiteSection>
         <ContentSectionHeading>
-          Today users have two choices when it comes to social networks...
+          Censorship resistance is great, but we need to protect the safety of
+          users
+        </ContentSectionHeading>
+        <p>
+          Growing a community around any public and open social application is
+          difficult. Despite the benefits decentralised applications offer
+          users, many will not be willing to sacrifice the quality of their user
+          experience for ideological reasons like decentralisation. The more
+          user-friendly and familiar we can make decentralised applications the
+          better our chances of them going mainstream.
+        </p>
+        <p>
+          Many users view content moderation as an integral part of modern
+          social media. Moving to a system where there is no platform level
+          content moderation may at best shock some users and at worst{" "}
+          <b>cause harm to young or otherwise vulnerable users</b>.
+        </p>
+        <p>
+          Our hackathon project, TrueSight, is a prototype for a new type of
+          oracle network built to provide content moderation data for content
+          hosted on IPFS. Our project also includes a simple demonstration of
+          this prototype through an application where users can upload images
+          which are displayed in a public-facing gallery.
+        </p>
+        <CtaButtonContainer>
+          <a href="https://truesite.link">
+            <CtaButton>See the demo!</CtaButton>
+          </a>
+        </CtaButtonContainer>
+        <VideoPlaceholder>Video placeholder</VideoPlaceholder>
+        <ContentSectionHeading>
+          Chainlink and IPFS enable us to do something not before possible
+        </ContentSectionHeading>
+        <p>
+          IPFS uses content addressing to identify content by what it contains
+          rather than the location. Using IPFS as a decentralised content
+          storage solution fits blockchain applications perfectly. Only the IPFS
+          content hash need be stored on-chain and due to the immutable nature
+          of content addressing we can be sure of the data we are referencing.
+        </p>
+        <p>
+          An independent network of Chainlink oracles providing image
+          classification services can be leveraged by social networks to provide{" "}
+          <b>transparent</b> and <b>trust-minimised</b> content moderation for
+          their users.
+        </p>
+        <p>
+          TrueSight is a demonstration of how a decentralised content moderation
+          network could be achieved through combining Chainlink and IPFS with
+          image classification algorithms. Both the user-uploaded images and the
+          calculated moderation labels are stored on IPFS and our demo Chainlink
+          node is utilising Amazon Rekognition (a cloud-based image
+          classification service) via an external adapter.
+        </p>
+
+        <ContentSectionHeading>A first line of defence</ContentSectionHeading>
+        <p>
+          While AI/machine learning solutions are constantly getting better at
+          classification, it is extremely difficult for code to make accurate
+          judgement about what is deemed acceptable to the majority of people.
+        </p>
+        <p>
+          It may therefore be beneficial for consuming applications to treat the
+          moderation labels from the TrueSight network as a first line of
+          defence while still allowing users the ability to manually flag
+          content.
+        </p>
+        <p>
+          Allowing users to provide feedback on classification results also
+          opens up the possibility of incentivising feedback loops to better
+          train the classification algorithms powering the TrueSight network.
+        </p>
+        <ContentSectionHeading>
+          Today users have two choices when it comes to social media...
         </ContentSectionHeading>
         <ComparisonGrid>
           <ComparisonGridCol>
@@ -66,10 +139,6 @@ export const ReactContent = () => {
             </ul>
           </ComparisonGridCol>
         </ComparisonGrid>
-        <ContentSectionHeading>
-          Content moderation should be focused on protecting the safety of young
-          or otherwise vulnerable users
-        </ContentSectionHeading>
         <p>
           It is clear that decentralised social media platforms have huge
           benefits over centralised ones. Users no longer have to trust a
@@ -93,36 +162,6 @@ export const ReactContent = () => {
             Source
           </QuoteSource>
         </Quote>
-        <ContentSectionHeading>
-          Chainlink and IPFS enable us to do something not before possible
-        </ContentSectionHeading>
-        <p>
-          IPFS uses content addressing to identify content by what it contains
-          rather than the location. Using IPFS as a decentralised content
-          storage solution fits blockchain applications perfectly. Only the IPFS
-          content hash need be stored on-chain and due to the immutable nature
-          of content addressing we can be sure of the data we are referencing.
-        </p>
-        <p>
-          An independent network of Chainlink oracles providing image
-          classification services can be leveraged by social networks to provide{" "}
-          <b>transparent</b> and <b>trust-minimised</b> content moderation for
-          their users.
-        </p>
-        <p>
-          Our hackathon project, TrueSight, includes a simplified demonstration
-          of how this can be achieved through combining Chainlink and IPFS with
-          image classification algorithms. Both the user-uploaded images and the
-          calculated moderation labels are stored on IPFS and our demo Chainlink
-          node is utilising Amazon Rekognition (a cloud-based image
-          classification service) via an external adapter.
-        </p>
-        <CtaButtonContainer>
-          <a href="https://truesite.link">
-            <CtaButton>See the demo!</CtaButton>
-          </a>
-        </CtaButtonContainer>
-        <VideoPlaceholder>Video placeholder</VideoPlaceholder>
         <ContentSectionHeading>Beyond social media</ContentSectionHeading>
         <p>
           There are many cases for content moderation outside of social media
