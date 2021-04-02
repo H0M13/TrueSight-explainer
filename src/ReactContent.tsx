@@ -35,22 +35,17 @@ export const ReactContent = () => {
           content moderation may at best shock some users and at worst{" "}
           <b>cause harm to young or otherwise vulnerable users</b>.
         </p>
-        <p>
-          Our hackathon project, TrueSight, is a prototype for a new type of
-          oracle network built to provide content moderation data for content
-          hosted on IPFS. Our project also includes a simple demonstration of
-          this prototype through an application where users can upload images
-          which are displayed in a public-facing gallery.
-        </p>
-        <CtaButtonContainer>
-          <a href="https://truesite.link">
-            <CtaButton>See the demo!</CtaButton>
-          </a>
-        </CtaButtonContainer>
-        <VideoPlaceholder>Video placeholder</VideoPlaceholder>
         <ContentSectionHeading>
           Chainlink and IPFS enable us to do something not before possible
         </ContentSectionHeading>
+        <p>
+          Our hackathon project, TrueSight, is a prototype for a new type of{" "}
+          <Anchor href="https://chain.link/">Chainlink</Anchor> oracle network
+          built to provide content moderation data for content of various
+          formats hosted on <Anchor href="https://ipfs.io/">IPFS</Anchor>. For
+          our prototype we demonstrate how the TrueSight network could be used
+          to calculate moderation labels for images.
+        </p>
         <p>
           IPFS uses content addressing to identify content by what it contains
           rather than the location. Using IPFS as a decentralised content
@@ -60,19 +55,46 @@ export const ReactContent = () => {
         </p>
         <p>
           An independent network of Chainlink oracles providing image
-          classification services can be leveraged by social networks to provide{" "}
-          <b>transparent</b> and <b>trust-minimised</b> content moderation for
-          their users.
+          classification services can be leveraged by decentralised applications
+          to provide <b>transparent</b> and <b>trust-minimised</b> content
+          moderation for their users.
         </p>
         <p>
-          TrueSight is a demonstration of how a decentralised content moderation
-          network could be achieved through combining Chainlink and IPFS with
-          image classification algorithms. Both the user-uploaded images and the
-          calculated moderation labels are stored on IPFS and our demo Chainlink
-          node is utilising Amazon Rekognition (a cloud-based image
-          classification service) via an external adapter.
+          In our TrueSight prototype both the input images and the calculated
+          moderation labels are stored on IPFS and our Chainlink node is
+          computing moderation labels off-chain using Amazon Rekognition (a
+          cloud-based image classification service) via an external adapter.
         </p>
-
+        <p>
+          Our project also includes a simple demonstration of a usage of this
+          prototype through an application where users can upload images which
+          are displayed in a public-facing gallery. Any moderation labels which
+          are reported by the TrueSight network are displayed as a warning to
+          the user before they view the image. If a user is so inclined they are
+          able to verify on-chain that the moderation labels were computed
+          independently by the network.
+        </p>
+        <p>
+          Being built with Chainlink the TrueSight network would be completely
+          blockchain agnostic but for the purposes of this demo we have decided
+          to deploy both it and our demo application on{" "}
+          <Anchor href="https://polygon.technology/">Polygon</Anchor>'s Mumbai
+          testnet. We chose to deploy on Polygon both because this project was
+          partly inspired by an{" "}
+          <Anchor href="#beyond-social-media">
+            issue we observed with the Aavegotchi project
+          </Anchor>{" "}
+          (which is also on Polygon) and being a production-ready layer 2
+          solution rapidly growing in popularity we thought it resembles a
+          typical environment for many decentralised social applications which
+          require the users to make a lot of micro-transactions.
+        </p>
+        <CtaButtonContainer>
+          <a href="https://truesite.link">
+            <CtaButton>See the demo!</CtaButton>
+          </a>
+        </CtaButtonContainer>
+        <VideoPlaceholder>Video placeholder</VideoPlaceholder>
         <ContentSectionHeading>A first line of defence</ContentSectionHeading>
         <p>
           While AI/machine learning solutions are constantly getting better at
@@ -163,7 +185,9 @@ export const ReactContent = () => {
             Source
           </QuoteSource>
         </Quote>
-        <ContentSectionHeading>Beyond social media</ContentSectionHeading>
+        <ContentSectionHeading id="beyond-social-media">
+          Beyond social media
+        </ContentSectionHeading>
         <p>
           There are many cases for content moderation outside of social media
           platforms too. One blockchain-based gaming example we have witnessed
@@ -384,4 +408,8 @@ const CtaButton = styled.button`
   &:hover {
     opacity: 0.8;
   }
+`;
+
+const Anchor = styled.a`
+  pointer-events: auto;
 `;
