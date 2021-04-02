@@ -108,10 +108,11 @@ export const ReactContent = () => {
                 content users are shown.
               </BadLi>
               <MedLi>
-                <b>Opaque content moderation - </b>Vulnerable users are for the
-                most part protected from malicious content, but any user
-                generated content may be removed with no explanation. Platform
-                bias may influence moderation.
+                <b>Opaque and inconsistent content moderation - </b>Vulnerable
+                users are for the most part protected from malicious content,
+                but any user generated content may be removed with no
+                explanation. Platform bias may influence moderation and there is
+                little consistency of moderation between networks.
               </MedLi>
               <GoodLi>
                 <b>Мainstream adoption</b>
