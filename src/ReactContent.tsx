@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import { ReactComponent as GithubLogo } from "./github.svg";
 
 export const ReactContent = () => {
   const [isMobileDevice, setIsMobileDevice] = useState(false);
@@ -227,6 +228,20 @@ export const ReactContent = () => {
           users of the TrueSight network.
         </p>
       </WhiteSection>
+      <FooterSection>
+        <MadeWithLove>
+          <span>Made with 💙 for the </span>
+          <FooterLink href="https://chainlink-2021.devpost.com/">
+            Spring 2021 Chainlink Hackathon
+          </FooterLink>
+        </MadeWithLove>
+        <Anchor href="https://github.com/H0M13/TrueSight-explainer">
+          <GithubBtn>
+            <GithubLogo fill="white" width="18" height="20" />
+            <span>GitHub</span>
+          </GithubBtn>
+        </Anchor>
+      </FooterSection>
     </Container>
   );
 };
@@ -274,6 +289,10 @@ const WhiteSection = styled.div`
   color: black;
   border-radius: 4px;
 
+  & p {
+    line-height: 1.3;
+  }
+
   @media (max-width: 1024px) {
     padding: 50px;
   }
@@ -288,6 +307,7 @@ const Heading = styled.h1`
   font-size: 2.6rem;
   font-weight: 600;
   margin: 0;
+  line-height: 2;
 
   @media (max-width: 768px) {
     font-size: 1.4rem;
@@ -300,6 +320,7 @@ const Subheading = styled.h2`
   font-weight: 500;
   margin: 0;
   font-style: italic;
+  line-height: 1.5;
 
   @media (max-width: 768px) {
     font-size: 1.2rem;
@@ -312,7 +333,7 @@ const ContentSectionHeading = styled.h3`
   color: #6c02c9;
 
   @media (max-width: 768px) {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 `;
 
@@ -353,6 +374,10 @@ const Quote = styled.div`
   padding: 20px;
   margin: 20px;
   border-radius: 8px;
+
+  @media(max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
 const QuoteLink = styled.a`
@@ -416,4 +441,56 @@ const CtaButton = styled.button`
 
 const Anchor = styled.a`
   pointer-events: auto;
+`;
+
+const FooterSection = styled.div`
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+`;
+
+const GithubBtn = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  color: white;
+
+  * {
+    text-decoration-color: white;
+    text-decoration: underline;
+  }
+
+  &:hover {
+    color: #ccc;
+  }
+`;
+
+const MadeWithLove = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  line-height: 1.5;
+
+  * {
+    white-space: nowrap;
+  }
+
+  @media(max-width: 600px) {
+    flex-direction: column;
+  }
+`;
+
+const FooterLink = styled(Anchor)`
+  color: white;
+  text-decoration-color: white;
+  text-decoration: underline;
+
+  &:hover {
+    color: #ccc;
+  }
 `;
