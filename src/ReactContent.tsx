@@ -127,8 +127,8 @@ export const ReactContent = () => {
                 to advertisers for profit.
               </BadLi>
               <BadLi>
-                <b>Risk of bias - </b>Application has complete control over what
-                content users are shown.
+                <b>Risk of bias - </b>Platform operators, political entities or
+                corporations may bias the censorship of content.
               </BadLi>
               <MedLi>
                 <b>Opaque and inconsistent content moderation - </b>Vulnerable
@@ -378,7 +378,7 @@ const Quote = styled.div`
   border-radius: 8px;
   pointer-events: auto;
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     font-size: 1rem;
   }
 `;
@@ -483,7 +483,7 @@ const MadeWithLove = styled.div`
     white-space: nowrap;
   }
 
-  @media(max-width: 600px) {
+  @media (max-width: 600px) {
     flex-direction: column;
   }
 `;
@@ -500,4 +500,4 @@ const FooterLink = styled(Anchor)`
 
 const ContentParagraph = styled.p`
   pointer-events: auto;
-`
+`;
