@@ -22,51 +22,51 @@ export const ReactContent = () => {
           Censorship resistance is great, but we need to protect the safety of
           users
         </ContentSectionHeading>
-        <p>
+        <ContentParagraph>
           Growing a community around any public and open social application is
           difficult. Despite the benefits decentralised applications offer
           users, many will not be willing to sacrifice the quality of their user
           experience for ideological reasons like decentralisation. The more
           user-friendly and familiar we can make decentralised applications the
           better our chances of them going mainstream.
-        </p>
-        <p>
+        </ContentParagraph>
+        <ContentParagraph>
           Many users view content moderation as an integral part of modern
           social media. Moving to a system where there is no platform level
           content moderation may at best shock some users and at worst{" "}
           <b>cause harm to young or otherwise vulnerable users</b>.
-        </p>
+        </ContentParagraph>
         <ContentSectionHeading>
           Chainlink and IPFS enable us to do something not before possible
         </ContentSectionHeading>
-        <p>
+        <ContentParagraph>
           Our hackathon project, TrueSight, is a prototype for a new type of{" "}
           <Anchor href="https://chain.link/">Chainlink</Anchor> oracle network
           built to provide content moderation data for content of various
           formats hosted on <Anchor href="https://ipfs.io/">IPFS</Anchor>. For
           our prototype we demonstrate how the TrueSight network could be used
           to calculate moderation labels for images.
-        </p>
-        <p>
+        </ContentParagraph>
+        <ContentParagraph>
           IPFS uses content addressing to identify content by what it contains
           rather than the location. Using IPFS as a decentralised content
           storage solution fits blockchain applications perfectly. Only the IPFS
           content hash need be stored on-chain and due to the immutable nature
           of content addressing we can be sure of the data we are referencing.
-        </p>
-        <p>
+        </ContentParagraph>
+        <ContentParagraph>
           An independent network of Chainlink oracles providing image
           classification services can be leveraged by decentralised applications
           to provide <b>transparent</b> and <b>trust-minimised</b> content
           moderation for their users.
-        </p>
-        <p>
+        </ContentParagraph>
+        <ContentParagraph>
           In our TrueSight prototype both the input images and the calculated
           moderation labels are stored on IPFS and our Chainlink node is
           computing moderation labels off-chain using Amazon Rekognition (a
           cloud-based image classification service) via an external adapter.
-        </p>
-        <p>
+        </ContentParagraph>
+        <ContentParagraph>
           Our project also includes a simple demonstration of a usage of this
           prototype through an application where users can upload images which
           are displayed in a public-facing gallery. Any moderation labels which
@@ -74,8 +74,8 @@ export const ReactContent = () => {
           the user before they view the image. If a user is so inclined they are
           able to verify on-chain that the moderation labels were computed
           independently by the network.
-        </p>
-        <p>
+        </ContentParagraph>
+        <ContentParagraph>
           Being built with Chainlink the TrueSight network would be completely
           blockchain agnostic but for the purposes of this demo we have decided
           to deploy both it and our demo application on{" "}
@@ -89,7 +89,7 @@ export const ReactContent = () => {
           solution rapidly growing in popularity we thought it resembles a
           typical environment for many decentralised social applications which
           require the users to make a lot of micro-transactions.
-        </p>
+        </ContentParagraph>
         <CtaButtonContainer>
           <a href="https://truesite.link">
             <CtaButton>See the demo!</CtaButton>
@@ -97,22 +97,22 @@ export const ReactContent = () => {
         </CtaButtonContainer>
         <VideoPlaceholder>Video placeholder</VideoPlaceholder>
         <ContentSectionHeading>A first line of defence</ContentSectionHeading>
-        <p>
+        <ContentParagraph>
           While AI/machine learning solutions are constantly getting better at
           classification, it is extremely difficult for code to make accurate
           judgement about what is deemed acceptable to the majority of people.
-        </p>
-        <p>
+        </ContentParagraph>
+        <ContentParagraph>
           It may therefore be beneficial for consuming applications to treat the
           moderation labels from the TrueSight network as a first line of
           defence while still allowing users the ability to manually flag
           content.
-        </p>
-        <p>
+        </ContentParagraph>
+        <ContentParagraph>
           Allowing users to provide feedback on classification results also
           opens up the possibility of incentivising feedback loops to better
           train the classification algorithms powering the TrueSight network.
-        </p>
+        </ContentParagraph>
         <ContentSectionHeading>
           Today users have two choices when it comes to social media...
         </ContentSectionHeading>
@@ -163,17 +163,17 @@ export const ReactContent = () => {
             </ul>
           </ComparisonGridCol>
         </ComparisonGrid>
-        <p>
+        <ContentParagraph>
           It is clear that decentralised social media platforms have huge
           benefits over centralised ones. Users no longer have to trust a
           centralised intermediary who may not have their best interests at
           heart.
-        </p>
-        <p>
+        </ContentParagraph>
+        <ContentParagraph>
           However, if we want to see mainstream adoption of a decentralised
           social media platform it is highly likely that some form of automated
           content moderation will be required to protect its users.
-        </p>
+        </ContentParagraph>
         <Quote>
           I think the issue of moderation is extremely difficult, and you’re
           seeing a lot of centralized companies today struggle with that.
@@ -189,7 +189,7 @@ export const ReactContent = () => {
         <ContentSectionHeading id="beyond-social-media">
           Beyond social media
         </ContentSectionHeading>
-        <p>
+        <ContentParagraph>
           There are many cases for content moderation outside of social media
           platforms too. One blockchain-based gaming example we have witnessed
           ourselves has been during the recent launch of Aavegotchis which are
@@ -200,25 +200,25 @@ export const ReactContent = () => {
           Aavegotchi DAO saw this as problematic and raised concern that lack of
           censorship here could have have a negative impact on the growth of the
           game.
-        </p>
-        <p>
+        </ContentParagraph>
+        <ContentParagraph>
           While this has been managed so far by censoring offensive names in the
           UI layer it may have been beneficial to disallow players from setting
           offensive names for their Aavegotchis on the smart contract layer.
           This would both standardise content moderation across front-end
           clients displaying Aavegotchis and also take the onus of content
           moderation off them.
-        </p>
+        </ContentParagraph>
         <ContentSectionHeading>Taking it further...</ContentSectionHeading>
-        <p>
+        <ContentParagraph>
           To better decentralise the TrueSight network a result aggregation
           mechanism could be implemented to allow several independent Chainlink
           nodes to perform their own classification algorithms before coming to
           consensus about the most correct answer. Ideally content would be run
           through a number of different classification algorithms to obtain a
           diverse set of opinions on the content.
-        </p>
-        <p>
+        </ContentParagraph>
+        <ContentParagraph>
           Most content classification algorithms will return results in
           completely different formats to one another. Aggregation on results of
           varying formats could be very challenging. It may therefore be
@@ -226,7 +226,7 @@ export const ReactContent = () => {
           the network must map results to before aggregation begins. Such a
           results format could be agreed upon democratically by members and/or
           users of the TrueSight network.
-        </p>
+        </ContentParagraph>
       </WhiteSection>
       <FooterSection>
         <MadeWithLove>
@@ -331,6 +331,7 @@ const ContentSectionHeading = styled.h3`
   font-size: 2rem;
   font-weight: 400;
   color: #6c02c9;
+  pointer-events: auto;
 
   @media (max-width: 768px) {
     font-size: 1.5rem;
@@ -342,6 +343,7 @@ const ComparisonGrid = styled.div`
   grid-template-columns: 50% 50%;
   grid-template-rows: auto;
   gap: 20px;
+  pointer-events: auto;
 
   @media (max-width: 768px) {
     grid-template-columns: 100%;
@@ -374,6 +376,7 @@ const Quote = styled.div`
   padding: 20px;
   margin: 20px;
   border-radius: 8px;
+  pointer-events: auto;
 
   @media(max-width: 768px) {
     font-size: 1rem;
@@ -494,3 +497,7 @@ const FooterLink = styled(Anchor)`
     color: #ccc;
   }
 `;
+
+const ContentParagraph = styled.p`
+  pointer-events: auto;
+`
