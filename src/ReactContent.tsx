@@ -33,8 +33,8 @@ export const ReactContent = () => {
         <ContentParagraph>
           Many users view content moderation as an integral part of modern
           social media. Moving to a system where there is no platform level
-          content moderation may at best shock some users and at worst{" "}
-          <b>cause harm to young or otherwise vulnerable users</b>.
+          content moderation may{" "}
+          <b>risk causing harm to young or otherwise vulnerable users</b>.
         </ContentParagraph>
         <ContentSectionHeading>
           Chainlink and IPFS enable us to do something not before possible
