@@ -13,3 +13,7 @@ The code for this hackathon project is contained in the following repositories:
 - https://github.com/H0M13/true-site-api
 - https://github.com/H0M13/RekognitionImageModerationLabelsEA
 
+## Project architecture diagram
+
+<img src="https://user-images.githubusercontent.com/6655367/113855763-501f8c00-9798-11eb-9d80-ccd6c7a64015.png" alt="architecture diagram" />
+
