@@ -163,6 +163,16 @@ export const ReactContent = () => {
             </ul>
           </ComparisonGridCol>
         </ComparisonGrid>
+        <Quote>
+          If we woke up tomorrow and decided to stop moderating content we’d end
+          up with a service very few people or advertisers would want to use.
+          Ultimately we’re running a business, and a business wants to grow the
+          number of customers it serves. Enforcing policy is a business
+          decision. - Jack Dorsey, co-founder and CEO of Twitter -{" "}
+          <QuoteSource href="https://twitter.com/jack/status/1375126802960556033">
+            Source
+          </QuoteSource>
+        </Quote>
         <ContentParagraph>
           It is clear that decentralised social media platforms have huge
           benefits over centralised ones. Users no longer have to trust a
