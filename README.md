@@ -1,6 +1,6 @@
 # TrueSight - Transparent content moderation powered by Chainlink
 
-<img src="https://user-images.githubusercontent.com/6655367/114251654-baebe580-9999-11eb-97d9-6a78d963d9a6.png" alt="illustration" style="width:100px;"/>
+<img src="https://user-images.githubusercontent.com/6655367/114251654-baebe580-9999-11eb-97d9-6a78d963d9a6.png" alt="illustration"/>
 
 Prototype of a new type of oracle network to provide moderation labels on user-generated content. Built for the [Spring 2021 Chainlink Virtual Hackathon](https://chainlink-2021.devpost.com/).
 
