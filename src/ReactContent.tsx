@@ -1,6 +1,22 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { ReactComponent as GithubLogo } from "./github.svg";
+import {
+  ComparisonGrid,
+  ComparisonGridCol,
+  ComparisonGridColHeading,
+  BadLi,
+  MedLi,
+  GoodLi,
+  ContentParagraph,
+  ContentSectionHeading,
+  CtaButton,
+  Heading,
+  Subheading,
+  Quote,
+  QuoteLink,
+  QuoteSource
+} from "./components";
 
 export const ReactContent = () => {
   const [isMobileDevice, setIsMobileDevice] = useState(false);
@@ -219,7 +235,7 @@ export const ReactContent = () => {
           clients displaying Aavegotchis and also take the onus of content
           moderation off them.
         </ContentParagraph>
-        <ContentSectionHeading>Taking it further...</ContentSectionHeading>
+        <ContentSectionHeading>Taking TrueSight further...</ContentSectionHeading>
         <ContentParagraph>
           To better decentralise the TrueSight network a result aggregation
           mechanism could be implemented to allow several independent Chainlink
@@ -236,6 +252,46 @@ export const ReactContent = () => {
           the network must map results to before aggregation begins. Such a
           results format could be agreed upon democratically by members and/or
           users of the TrueSight network.
+        </ContentParagraph>
+        <ContentParagraph>
+          Another step could be to grow Truesight into a decentralised
+          moderation marketplace. Here node operators could list their own
+          implementations of a content moderation service whilst conforming to
+          the standardised response templates. Different nodes would have
+          reliability scores that would move up or down depending on how their
+          node classified compared to the majority. This could then allow the
+          system to weight the vote of nodes by the reliability of their
+          classifications.
+        </ContentParagraph>
+        <ContentParagraph>
+          One difficulty with automated content moderation is that results can
+          be subjective in terms of what the true labels should be. There may
+          well be no objective answer. Should a gorilla with its middle finger
+          raised be interpreted in the same way as a human with its middle
+          finger raised? If there is no objective answer how can oracles come to
+          a consensus as to what the labels should be?
+        </ContentParagraph>
+        <ContentParagraph>
+          Determining whether a node is responding with bad data is particularly
+          difficult for classification data both due to the subjectivity of the
+          data and the rapid pace which systems for determining classification
+          labels are improving.
+        </ContentParagraph>
+        <ContentParagraph>
+          Suppose a new high-performing node joined the network and was able to
+          identify a label that all other nodes couldn't. A primitive
+          aggregation mechanism would likely determine the results from this
+          node to be incorrect and that it is a bad node when it should really
+          be considered the best node.
+        </ContentParagraph>
+        <ContentParagraph>
+          It seems likely that, at least in the short-term, some human
+          intervention to adjudicate on contentious classification results would
+          be required to correctly determine the best performing nodes. To
+          reduce this manual workload a calibration dataset could be grown over
+          time with a controlled set of images with known labels. This dataset
+          could be used to automatically judge the quality of new nodes entering
+          the network.
         </ContentParagraph>
       </WhiteSection>
       <FooterSection>
@@ -312,114 +368,6 @@ const WhiteSection = styled.div`
   }
 `;
 
-const Heading = styled.h1`
-  text-align: center;
-  font-size: 2.6rem;
-  font-weight: 600;
-  margin: 0;
-  line-height: 2;
-
-  @media (max-width: 768px) {
-    font-size: 1.4rem;
-  }
-`;
-
-const Subheading = styled.h2`
-  text-align: center;
-  font-size: 1.8rem;
-  font-weight: 500;
-  margin: 0;
-  font-style: italic;
-  line-height: 1.5;
-
-  @media (max-width: 768px) {
-    font-size: 1.2rem;
-  }
-`;
-
-const ContentSectionHeading = styled.h3`
-  font-size: 2rem;
-  font-weight: 400;
-  color: #6c02c9;
-  pointer-events: auto;
-
-  @media (max-width: 768px) {
-    font-size: 1.5rem;
-  }
-`;
-
-const ComparisonGrid = styled.div`
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: auto;
-  gap: 20px;
-  pointer-events: auto;
-
-  @media (max-width: 768px) {
-    grid-template-columns: 100%;
-    grid-template-rows: auto auto;
-  }
-`;
-
-const ComparisonGridCol = styled.div`
-  min-height: 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-`;
-
-const ComparisonGridColHeading = styled.span`
-  font-size: 1.4rem;
-  text-decoration: underline;
-
-  @media (max-width: 768px) {
-    font-size: 1.2rem;
-  }
-`;
-
-const Quote = styled.div`
-  font-style: italic;
-  background-color: #a4eafc;
-  color: #003f9e;
-  font-size: 1.2rem;
-  padding: 20px;
-  margin: 20px;
-  border-radius: 8px;
-  pointer-events: auto;
-
-  @media (max-width: 768px) {
-    font-size: 1rem;
-  }
-`;
-
-const QuoteLink = styled.a`
-  pointer-events: auto;
-  color: #003f9e;
-`;
-
-const QuoteSource = styled(QuoteLink)`
-  font-style: initial;
-  font-size: 0.8rem;
-  color: #003f9e;
-`;
-
-const ComparisonsLi = styled.li`
-  margin: 10px 0;
-`;
-
-const BadLi = styled(ComparisonsLi)`
-  color: red;
-`;
-
-const MedLi = styled(ComparisonsLi)`
-  color: #d18102;
-`;
-
-const GoodLi = styled(ComparisonsLi)`
-  color: green;
-`;
-
 const VideoPlaceholder = styled.div`
   width: 100%;
   max-width: 800px;
@@ -433,23 +381,6 @@ const CtaButtonContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
-
-const CtaButton = styled.button`
-  font-size: 2rem;
-  color: white;
-  background-color: #6c02c9;
-  border: 2px solid black;
-  border-radius: 8px;
-  padding: 10px;
-  margin: 20px;
-  pointer-events: auto;
-  cursor: pointer;
-  font-family: "Montserrat";
-
-  &:hover {
-    opacity: 0.8;
-  }
 `;
 
 const Anchor = styled.a`
@@ -506,8 +437,4 @@ const FooterLink = styled(Anchor)`
   &:hover {
     color: #ccc;
   }
-`;
-
-const ContentParagraph = styled.p`
-  pointer-events: auto;
 `;
