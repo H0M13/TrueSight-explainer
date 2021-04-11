@@ -106,12 +106,17 @@ export const ReactContent = () => {
           typical environment for many decentralised social applications which
           require the users to make a lot of micro-transactions.
         </ContentParagraph>
+        <VideoContainer>
+          <VideoIframe
+            title="truesight-video"
+            src="https://www.youtube.com/embed/iu7bfAYMFRw"
+          ></VideoIframe>
+        </VideoContainer>
         <CtaButtonContainer>
           <a href="https://truesite.link">
-            <CtaButton>See the demo!</CtaButton>
+            <CtaButton>Play with the demo!</CtaButton>
           </a>
         </CtaButtonContainer>
-        <VideoPlaceholder>Video placeholder</VideoPlaceholder>
         <ContentSectionHeading>A first line of defence</ContentSectionHeading>
         <ContentParagraph>
           While AI/machine learning solutions are constantly getting better at
@@ -235,7 +240,9 @@ export const ReactContent = () => {
           clients displaying Aavegotchis and also take the onus of content
           moderation off them.
         </ContentParagraph>
-        <ContentSectionHeading>Taking TrueSight further...</ContentSectionHeading>
+        <ContentSectionHeading>
+          Taking TrueSight further...
+        </ContentSectionHeading>
         <ContentParagraph>
           To better decentralise the TrueSight network a result aggregation
           mechanism could be implemented to allow several independent Chainlink
@@ -368,12 +375,21 @@ const WhiteSection = styled.div`
   }
 `;
 
-const VideoPlaceholder = styled.div`
+const VideoContainer = styled.div`
+  margin: 40px 0;
+  pointer-events: auto;
+  position: relative;
   width: 100%;
-  max-width: 800px;
-  height: 450px;
-  background-color: red;
-  margin: 20px 0;
+  height: 0;
+  padding-bottom: 56.25%;
+`;
+
+const VideoIframe = styled.iframe`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 `;
 
 const CtaButtonContainer = styled.div`
