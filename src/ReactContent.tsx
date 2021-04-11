@@ -254,7 +254,7 @@ export const ReactContent = () => {
           users of the TrueSight network.
         </ContentParagraph>
         <ContentParagraph>
-          Another step could be to grow Truesight into a decentralised
+          Another step could be to grow TrueSight into a decentralised
           moderation marketplace. Here node operators could list their own
           implementations of a content moderation service whilst conforming to
           the standardised response templates. Different nodes would have
