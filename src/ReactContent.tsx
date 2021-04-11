@@ -247,24 +247,21 @@ export const ReactContent = () => {
           To better decentralise the TrueSight network a result aggregation
           mechanism could be implemented to allow several independent Chainlink
           nodes to perform their own classification algorithms before coming to
-          consensus about the most correct answer. Ideally content would be run
-          through a number of different classification algorithms to obtain a
-          diverse set of opinions on the content.
+          consensus. Ideally content would be run through a number of different
+          classification algorithms to obtain a diverse set of opinions on the
+          content.
         </ContentParagraph>
         <ContentParagraph>
           Most content classification algorithms will return results in
           completely different formats to one another. Aggregation on results of
-          varying formats could be very challenging. It may therefore be
-          beneficial to have an agreed upon results format which all nodes in
-          the network must map results to before aggregation begins. Such a
-          results format could be agreed upon democratically by members and/or
-          users of the TrueSight network.
+          varying formats could be challenging. It may therefore be beneficial
+          to have an agreed upon results format which all nodes in the network
+          must map results to before aggregation begins. Such a results format
+          could be agreed upon democratically by members and/or users of the
+          TrueSight network.
         </ContentParagraph>
         <ContentParagraph>
-          Another step could be to grow TrueSight into a decentralised
-          moderation marketplace. Here node operators could list their own
-          implementations of a content moderation service whilst conforming to
-          the standardised response templates. Different nodes would have
+          To further develop this aggregation layer, different nodes could have
           reliability scores that would move up or down depending on how their
           node classified compared to the majority. This could then allow the
           system to weight the vote of nodes by the reliability of their
@@ -281,8 +278,8 @@ export const ReactContent = () => {
         <ContentParagraph>
           Determining whether a node is responding with bad data is particularly
           difficult for classification data both due to the subjectivity of the
-          data and the rapid pace which systems for determining classification
-          labels are improving.
+          data and the rapid pace at which computer vision systems are
+          improving.
         </ContentParagraph>
         <ContentParagraph>
           Suppose a new high-performing node joined the network and was able to
@@ -298,7 +295,9 @@ export const ReactContent = () => {
           reduce this manual workload a calibration dataset could be grown over
           time with a controlled set of images with known labels. This dataset
           could be used to automatically judge the quality of new nodes entering
-          the network.
+          the network and allow a baseline calibration. A different
+          implementation could reward volunteer moderators for generating their
+          own labelled test sets to run across the network.
         </ContentParagraph>
       </WhiteSection>
       <FooterSection>
