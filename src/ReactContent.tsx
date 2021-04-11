@@ -110,7 +110,7 @@ export const ReactContent = () => {
           <VideoIframe
             allow="fullscreen;"
             title="truesight-video"
-            src="https://www.youtube.com/embed/iu7bfAYMFRw"
+            src="https://www.youtube.com/embed/CaZyugAAyqM"
           ></VideoIframe>
         </VideoContainer>
         <CtaButtonContainer>
